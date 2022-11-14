@@ -20,7 +20,10 @@ func _toggled(button_pressed):
 func _unhandled_key_input(event):
 	# Note that you can use the _input callback instead, especially if
 	# you want to work with gamepads.
-	remap_action_to(event)
+	
+	# stop key change, when cancel action was pressed
+	if not event.is_action("ui_cancel"):
+		remap_action_to(event)
 	button_pressed = false
 
 
@@ -31,7 +34,6 @@ func remap_action_to(event):
 	# And then save it to the keymaps file
 	KeyPersistence.keymaps[action] = event
 	KeyPersistence.save_keymap()
-#	text = "%s Key" % event.as_text()
 
 
 func display_current_key():
