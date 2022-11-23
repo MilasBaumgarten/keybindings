@@ -1,188 +1,110 @@
-[gd_scene load_steps=4 format=3 uid="uid://bhhkngvb8yuu0"]
+[gd_scene load_steps=2 format=2]
 
-[ext_resource type="Script" path="res://addons/keybindings/keybinding_menu.gd" id="1_0x5m6"]
-[ext_resource type="PackedScene" uid="uid://cogvc7mlmr810" path="res://addons/vsk_menu/vsk_button.tscn" id="2_1856n"]
-[ext_resource type="Script" path="res://addons/keybindings/action_remap_button.gd" id="2_gnkwo"]
+[ext_resource path="res://addons/keybindings/action_remap_button.gd" type="Script" id=1]
 
-[node name="keybinding_menu" type="Control"]
-layout_mode = 3
-anchors_preset = 15
+[node name="KeybindingMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("1_0x5m6")
 
-[node name="Panel2" type="Panel" parent="."]
-layout_mode = 1
-anchors_preset = 15
+[node name="Panel" type="Panel" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 
-[node name="CenterContainer" type="VBoxContainer" parent="Panel2"]
-layout_mode = 1
-anchors_preset = 15
+[node name="CenterContainer" type="VBoxContainer" parent="Panel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 10.0
-offset_top = 10.0
-offset_right = -10.0
-offset_bottom = -10.0
-grow_horizontal = 2
-grow_vertical = 2
 alignment = 1
 
-[node name="Control" type="HBoxContainer" parent="Panel2/CenterContainer"]
-layout_mode = 2
-offset_right = 1132.0
-offset_bottom = 588.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="BlankSpaceLeft" type="Control" parent="Panel2/CenterContainer/Control"]
-layout_mode = 2
-anchors_preset = 0
-offset_right = 186.0
-offset_bottom = 588.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.25
-
-[node name="ButtonsContainer" type="VBoxContainer" parent="Panel2/CenterContainer/Control"]
-layout_mode = 2
-offset_left = 192.0
-offset_right = 939.0
-offset_bottom = 588.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/CenterContainer"]
+margin_top = 254.0
+margin_right = 1024.0
+margin_bottom = 346.0
 alignment = 1
 
-[node name="MoveForwardsContainer" type="HBoxContainer" parent="Panel2/CenterContainer/Control/ButtonsContainer"]
-layout_mode = 2
-offset_top = 219.0
-offset_right = 747.0
-offset_bottom = 252.0
-size_flags_horizontal = 3
+[node name="ButtonsContainer" type="VBoxContainer" parent="Panel/CenterContainer/HBoxContainer"]
+margin_left = 394.0
+margin_right = 629.0
+margin_bottom = 92.0
 alignment = 1
 
-[node name="MoveForwardsLabel" type="Label" parent="Panel2/CenterContainer/Control/ButtonsContainer/MoveForwardsContainer"]
-layout_mode = 2
-offset_right = 377.0
-offset_bottom = 33.0
-size_flags_horizontal = 3
-text = "TR_MENU_EDIT_KEYBINDINGS_MOVE_FORWARDS"
+[node name="MoveForwardsContainer" type="HBoxContainer" parent="Panel/CenterContainer/HBoxContainer/ButtonsContainer"]
+margin_right = 235.0
+margin_bottom = 20.0
+alignment = 1
 
-[node name="MoveForwardsButton" type="Button" parent="Panel2/CenterContainer/Control/ButtonsContainer/MoveForwardsContainer"]
-layout_mode = 2
-offset_left = 383.0
-offset_right = 747.0
-offset_bottom = 33.0
-size_flags_horizontal = 3
+[node name="Label" type="Label" parent="Panel/CenterContainer/HBoxContainer/ButtonsContainer/MoveForwardsContainer"]
+margin_left = 4.0
+margin_top = 3.0
+margin_right = 215.0
+margin_bottom = 17.0
+text = "KEYBINDINGS_MOVE_FORWARDS"
+
+[node name="Button" type="Button" parent="Panel/CenterContainer/HBoxContainer/ButtonsContainer/MoveForwardsContainer"]
+margin_left = 219.0
+margin_right = 231.0
+margin_bottom = 20.0
 toggle_mode = true
-script = ExtResource("2_gnkwo")
+script = ExtResource( 1 )
 action = "move_forwards"
 
-[node name="MoveLeftContainer" type="HBoxContainer" parent="Panel2/CenterContainer/Control/ButtonsContainer"]
-layout_mode = 2
-offset_top = 258.0
-offset_right = 747.0
-offset_bottom = 291.0
-size_flags_horizontal = 3
+[node name="MoveLeftContainer" type="HBoxContainer" parent="Panel/CenterContainer/HBoxContainer/ButtonsContainer"]
+margin_top = 24.0
+margin_right = 235.0
+margin_bottom = 44.0
 alignment = 1
 
-[node name="MoveLeftLabel" type="Label" parent="Panel2/CenterContainer/Control/ButtonsContainer/MoveLeftContainer"]
-layout_mode = 2
-offset_right = 370.0
-offset_bottom = 33.0
-size_flags_horizontal = 3
-text = "TR_MENU_EDIT_KEYBINDINGS_MOVE_LEFT"
+[node name="Label" type="Label" parent="Panel/CenterContainer/HBoxContainer/ButtonsContainer/MoveLeftContainer"]
+margin_left = 26.0
+margin_top = 3.0
+margin_right = 192.0
+margin_bottom = 17.0
+text = "KEYBINDINGS_MOVE_LEFT"
 
-[node name="MoveLeftButton" type="Button" parent="Panel2/CenterContainer/Control/ButtonsContainer/MoveLeftContainer"]
-layout_mode = 2
-offset_left = 376.0
-offset_right = 747.0
-offset_bottom = 33.0
-size_flags_horizontal = 3
+[node name="Button" type="Button" parent="Panel/CenterContainer/HBoxContainer/ButtonsContainer/MoveLeftContainer"]
+margin_left = 196.0
+margin_right = 208.0
+margin_bottom = 20.0
 toggle_mode = true
-script = ExtResource("2_gnkwo")
+script = ExtResource( 1 )
 action = "move_left"
 
-[node name="MoveBackwardsContainer" type="HBoxContainer" parent="Panel2/CenterContainer/Control/ButtonsContainer"]
-layout_mode = 2
-offset_top = 297.0
-offset_right = 747.0
-offset_bottom = 330.0
-size_flags_horizontal = 3
+[node name="MoveBackwardsContainer" type="HBoxContainer" parent="Panel/CenterContainer/HBoxContainer/ButtonsContainer"]
+margin_top = 48.0
+margin_right = 235.0
+margin_bottom = 68.0
 alignment = 1
 
-[node name="MoveBackwardsLabel" type="Label" parent="Panel2/CenterContainer/Control/ButtonsContainer/MoveBackwardsContainer"]
-layout_mode = 2
-offset_right = 387.0
-offset_bottom = 33.0
-size_flags_horizontal = 3
-text = "TR_MENU_EDIT_KEYBINDINGS_MOVE_BACKWARDS"
+[node name="Label" type="Label" parent="Panel/CenterContainer/HBoxContainer/ButtonsContainer/MoveBackwardsContainer"]
+margin_top = 3.0
+margin_right = 219.0
+margin_bottom = 17.0
+text = "KEYBINDINGS_MOVE_BACKWARDS"
 
-[node name="MoveBackwardsButton" type="Button" parent="Panel2/CenterContainer/Control/ButtonsContainer/MoveBackwardsContainer"]
-layout_mode = 2
-offset_left = 393.0
-offset_right = 747.0
-offset_bottom = 33.0
-size_flags_horizontal = 3
+[node name="Button" type="Button" parent="Panel/CenterContainer/HBoxContainer/ButtonsContainer/MoveBackwardsContainer"]
+margin_left = 223.0
+margin_right = 235.0
+margin_bottom = 20.0
 toggle_mode = true
-script = ExtResource("2_gnkwo")
+script = ExtResource( 1 )
 action = "move_backwards"
 
-[node name="MoveRightContainer" type="HBoxContainer" parent="Panel2/CenterContainer/Control/ButtonsContainer"]
-layout_mode = 2
-offset_top = 336.0
-offset_right = 747.0
-offset_bottom = 369.0
-size_flags_horizontal = 3
+[node name="MoveRightContainer" type="HBoxContainer" parent="Panel/CenterContainer/HBoxContainer/ButtonsContainer"]
+margin_top = 72.0
+margin_right = 235.0
+margin_bottom = 92.0
 alignment = 1
 
-[node name="MoveRightLabel" type="Label" parent="Panel2/CenterContainer/Control/ButtonsContainer/MoveRightContainer"]
-layout_mode = 2
-offset_right = 370.0
-offset_bottom = 33.0
-size_flags_horizontal = 3
-text = "TR_MENU_EDIT_KEYBINDINGS_MOVE_RIGHT"
+[node name="Label" type="Label" parent="Panel/CenterContainer/HBoxContainer/ButtonsContainer/MoveRightContainer"]
+margin_left = 20.0
+margin_top = 3.0
+margin_right = 198.0
+margin_bottom = 17.0
+text = "KEYBINDINGS_MOVE_RIGHT"
 
-[node name="MoveRightButton" type="Button" parent="Panel2/CenterContainer/Control/ButtonsContainer/MoveRightContainer"]
-layout_mode = 2
-offset_left = 376.0
-offset_right = 747.0
-offset_bottom = 33.0
-size_flags_horizontal = 3
+[node name="Button" type="Button" parent="Panel/CenterContainer/HBoxContainer/ButtonsContainer/MoveRightContainer"]
+margin_left = 202.0
+margin_right = 214.0
+margin_bottom = 20.0
 toggle_mode = true
-script = ExtResource("2_gnkwo")
+script = ExtResource( 1 )
 action = "move_right"
-
-[node name="BlankSpaceRight" type="Control" parent="Panel2/CenterContainer/Control"]
-layout_mode = 2
-anchors_preset = 0
-offset_left = 945.0
-offset_right = 1132.0
-offset_bottom = 588.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.25
-
-[node name="BottomContainer" type="HBoxContainer" parent="Panel2/CenterContainer"]
-layout_mode = 2
-offset_top = 594.0
-offset_right = 1132.0
-offset_bottom = 628.0
-
-[node name="BackButton" parent="Panel2/CenterContainer/BottomContainer" instance=ExtResource("2_1856n")]
-layout_mode = 2
-offset_right = 134.0
-offset_bottom = 34.0
-text = "TR_MENU_BACK"
-
-[connection signal="toggled" from="Panel2/CenterContainer/Control/ButtonsContainer/MoveForwardsContainer/MoveForwardsButton" to="Panel2/CenterContainer/Control/ButtonsContainer/MoveForwardsContainer/MoveForwardsButton" method="_on_toggled"]
-[connection signal="toggled" from="Panel2/CenterContainer/Control/ButtonsContainer/MoveLeftContainer/MoveLeftButton" to="Panel2/CenterContainer/Control/ButtonsContainer/MoveLeftContainer/MoveLeftButton" method="_on_toggled"]
-[connection signal="toggled" from="Panel2/CenterContainer/Control/ButtonsContainer/MoveBackwardsContainer/MoveBackwardsButton" to="Panel2/CenterContainer/Control/ButtonsContainer/MoveBackwardsContainer/MoveBackwardsButton" method="_on_toggled"]
-[connection signal="toggled" from="Panel2/CenterContainer/Control/ButtonsContainer/MoveRightContainer/MoveRightButton" to="Panel2/CenterContainer/Control/ButtonsContainer/MoveRightContainer/MoveRightButton" method="_on_toggled"]
-[connection signal="pressed" from="Panel2/CenterContainer/BottomContainer/BackButton" to="." method="_on_back_button_pressed"]

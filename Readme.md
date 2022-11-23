@@ -1,12 +1,15 @@
 # Keybinding Plugin
 The code in this plugin is mostly copied from: https://github.com/godotengine/godot-demo-projects/tree/master/gui/input_mapping.
-It was mostly just adjusted to work with Godot 4.
 
 The keymap will be saved to the user directory.
 ```
 Win: %APPDATA%/<Project Name>
 Linus, macOS: ~/.local/share/godot/app_userdata/<Project Name>
 ```
+
+## Setup
+- implement your own keybinding menu (addons/keybinding_menu can be used as a reference)
+	- the translation file (addons/keybindings/localisation/keybind_menu_strings.en.translation) for the example menu has to be added manually to work (Project Settings > Translations)
 
 ## Note:
 - the Directory of the keymap might not be the project name, if a custom user dir was set

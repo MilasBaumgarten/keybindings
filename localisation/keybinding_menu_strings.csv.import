@@ -2,14 +2,13 @@
 
 importer="csv_translation"
 type="Translation"
-uid="uid://4lglupnnt7pe"
 
 [deps]
 
-files=["res://addons/keybindings/localisation/keybinding_menu_strings.en.translation"]
+files=[ "res://addons/keybindings/localisation/keybinding_menu_strings.en.translation" ]
 
 source_file="res://addons/keybindings/localisation/keybinding_menu_strings.csv"
-dest_files=["res://addons/keybindings/localisation/keybinding_menu_strings.en.translation"]
+dest_files=[ "res://addons/keybindings/localisation/keybinding_menu_strings.en.translation" ]
 
 [params]
 
