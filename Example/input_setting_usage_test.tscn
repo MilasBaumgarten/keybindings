@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://addons/keybindings/Example/input_settings_usage_example.gd" type="Script" id=1]
+[ext_resource path="res://addons/keybindings/example/input_settings_usage_example.gd" type="Script" id=1]
 [ext_resource path="res://addons/keybindings/resources/input_setting_data.tres" type="Resource" id=2]
 
-[node name="Control" type="Control"]
+[node name="InputSensitivity" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )

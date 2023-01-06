@@ -16,95 +16,95 @@ anchor_bottom = 1.0
 alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel/CenterContainer"]
-margin_top = 254.0
+margin_top = 226.0
 margin_right = 1024.0
-margin_bottom = 346.0
+margin_bottom = 374.0
 alignment = 1
 
 [node name="ButtonsContainer" type="VBoxContainer" parent="Panel/CenterContainer/HBoxContainer"]
-margin_left = 394.0
-margin_right = 629.0
-margin_bottom = 92.0
+margin_left = 357.0
+margin_right = 667.0
+margin_bottom = 148.0
 alignment = 1
 
 [node name="MoveForwardsContainer" type="HBoxContainer" parent="Panel/CenterContainer/HBoxContainer/ButtonsContainer"]
-margin_right = 235.0
-margin_bottom = 20.0
+margin_right = 310.0
+margin_bottom = 34.0
 alignment = 1
 
 [node name="Label" type="Label" parent="Panel/CenterContainer/HBoxContainer/ButtonsContainer/MoveForwardsContainer"]
-margin_left = 4.0
+margin_left = 7.0
 margin_top = 3.0
-margin_right = 215.0
-margin_bottom = 17.0
+margin_right = 286.0
+margin_bottom = 31.0
 text = "KEYBINDINGS_MOVE_FORWARDS"
 
 [node name="Button" type="Button" parent="Panel/CenterContainer/HBoxContainer/ButtonsContainer/MoveForwardsContainer"]
-margin_left = 219.0
-margin_right = 231.0
-margin_bottom = 20.0
+margin_left = 290.0
+margin_right = 302.0
+margin_bottom = 34.0
 toggle_mode = true
 script = ExtResource( 1 )
 action = "move_forwards"
 
 [node name="MoveLeftContainer" type="HBoxContainer" parent="Panel/CenterContainer/HBoxContainer/ButtonsContainer"]
-margin_top = 24.0
-margin_right = 235.0
-margin_bottom = 44.0
+margin_top = 38.0
+margin_right = 310.0
+margin_bottom = 72.0
 alignment = 1
 
 [node name="Label" type="Label" parent="Panel/CenterContainer/HBoxContainer/ButtonsContainer/MoveLeftContainer"]
-margin_left = 26.0
+margin_left = 35.0
 margin_top = 3.0
-margin_right = 192.0
-margin_bottom = 17.0
+margin_right = 258.0
+margin_bottom = 31.0
 text = "KEYBINDINGS_MOVE_LEFT"
 
 [node name="Button" type="Button" parent="Panel/CenterContainer/HBoxContainer/ButtonsContainer/MoveLeftContainer"]
-margin_left = 196.0
-margin_right = 208.0
-margin_bottom = 20.0
+margin_left = 262.0
+margin_right = 274.0
+margin_bottom = 34.0
 toggle_mode = true
 script = ExtResource( 1 )
 action = "move_left"
 
 [node name="MoveBackwardsContainer" type="HBoxContainer" parent="Panel/CenterContainer/HBoxContainer/ButtonsContainer"]
-margin_top = 48.0
-margin_right = 235.0
-margin_bottom = 68.0
+margin_top = 76.0
+margin_right = 310.0
+margin_bottom = 110.0
 alignment = 1
 
 [node name="Label" type="Label" parent="Panel/CenterContainer/HBoxContainer/ButtonsContainer/MoveBackwardsContainer"]
 margin_top = 3.0
-margin_right = 219.0
-margin_bottom = 17.0
+margin_right = 294.0
+margin_bottom = 31.0
 text = "KEYBINDINGS_MOVE_BACKWARDS"
 
 [node name="Button" type="Button" parent="Panel/CenterContainer/HBoxContainer/ButtonsContainer/MoveBackwardsContainer"]
-margin_left = 223.0
-margin_right = 235.0
-margin_bottom = 20.0
+margin_left = 298.0
+margin_right = 310.0
+margin_bottom = 34.0
 toggle_mode = true
 script = ExtResource( 1 )
 action = "move_backwards"
 
 [node name="MoveRightContainer" type="HBoxContainer" parent="Panel/CenterContainer/HBoxContainer/ButtonsContainer"]
-margin_top = 72.0
-margin_right = 235.0
-margin_bottom = 92.0
+margin_top = 114.0
+margin_right = 310.0
+margin_bottom = 148.0
 alignment = 1
 
 [node name="Label" type="Label" parent="Panel/CenterContainer/HBoxContainer/ButtonsContainer/MoveRightContainer"]
-margin_left = 20.0
+margin_left = 30.0
 margin_top = 3.0
-margin_right = 198.0
-margin_bottom = 17.0
+margin_right = 263.0
+margin_bottom = 31.0
 text = "KEYBINDINGS_MOVE_RIGHT"
 
 [node name="Button" type="Button" parent="Panel/CenterContainer/HBoxContainer/ButtonsContainer/MoveRightContainer"]
-margin_left = 202.0
-margin_right = 214.0
-margin_bottom = 20.0
+margin_left = 267.0
+margin_right = 279.0
+margin_bottom = 34.0
 toggle_mode = true
 script = ExtResource( 1 )
 action = "move_right"
